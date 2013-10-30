@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Lily&amp;Strum Admin – Product Single</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="/lsadmin/style.css" rel="stylesheet">
+    <link href="/lsadmin/css/bootstrap.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="../assets/js/html5shiv.js"></script>
+    <![endif]-->
+    <!-- Fav and touch icons -->
+    <link rel="shortcut icon" href="./images/favicon.ico">
+  </head>
+  
+  <body class="single product-detail">
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="/lsadmin/index.html"><img src="/lsadmin/images/ls_header_logo.png"></a>
+          <div class="nav-collapse collapse">
+            <p class="navbar-text pull-right">
+              Logged in as <a href="#" class="navbar-link">Traci Lipple</a>
+            </p>
+            <ul class="nav">
+              <li><a href="/lsadmin/catalog/catalog-index.html">Products</a></li>              
+              <li><a href="/lsadmin/people/people-index.html">People</a></li>
+              <li><a href="/lsadmin/occasions/occasion-index.html">Occasions</a></li>
+              <li><a href="/lsadmin/questions/question-index.html">Question Manager</a></li>
+              <!--<li><a href="/lsadmin/feeds/feed-index.html">Feeds</a></li>-->
+              <!--<li><a href="#">Affiliates</a></li>-->
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid header">
+            <div class="row-fluid"> 
+                <ul class="breadcrumb">
+                    <li><a href="/lsadmin/index.html">Home</a> <span class="divider">/</span></li>
+                    <li class="active">Occasions</li>
+                       <div class="search">
+                        <form class="form-search">
+                            <input type="text" placeholder="Search Occasions" class="input-medium search-query">
+                        </form>
+                      </div>
+                </ul>
+                <h1 class="page-title">Product Name</h1>
+            </div>
+    </div>
+
+
+    <div class="container-fluid details">
+            <div class="row-fluid">
+              <div class="span6">
+                    <div class="detail-header">
+                        <h4 class="detail-title">Product Details</h4>
+                        <a class="detail-edit-link" href="#editDetails" role="button" data-toggle="modal">Edit Details</a>
+                        <span class="clearfix"></span>
+                    </div>
+                    <div class="detail-body">
+                         <img class="detail-image img-polaroid" src="http://placehold.it/150x150&text=product"/>
+                         <h2 class="lead-time">10 days away</h2>
+                         <p class="date">4/23/2014</p>
+                    </div>
+              </div>
+              <div class="span6">
+                <div class="detail-header">
+                    <h4 class="detail-title">Product Tags</h4>
+                    <a class="detail-edit-link" href="#editTags" role="button" data-toggle="modal">Edit Tags</a>
+                    <span class="clearfix"></span>
+                </div>
+                <div class="detail-body">
+                    <div id="tagcloud"><span class="label label-info">Religious</span> <span class="label label-info">Christian</span> <span class="label label-info">Pink</span> <span class="label label-info">Green</span> <span class="label label-info">Rabbit</span> <span class="label label-info">Chocolate</span> </div>
+                </div>
+              </div>
+
+            </div><!-- /Occasion-details -->
+    </div><!-- /details -->
+    <div class="container-fluid sort">
+        <div class="row-fluid">
+            <ul class="nav nav-pills">
+                <li class="active"><a href="#giftees" data-toggle="tab"><i class="icon-user"></i>Moments</a>
+                <li><a href="#occasions" data-toggle="tab"><i class="icon-gift"></i>Occasions</a></li>
+            </ul>
+            <div class="pagination pull-right">
+                <ul>
+                  <li class="disabled"><a href="#">&laquo;</a></li>
+                  <li><a href="#">1</a></li>
+                  <li><a href="#">2</a></li>
+                  <li><a href="#">3</a></li>
+                  <li><a href="#">4</a></li>
+                  <li><a href="#">5</a></li>
+                  <li><a href="#">&raquo;</a></li>
+                </ul>
+            </div> <!-- /pagination -->
+            <a class="btn btn-add pull-right" href="#assign" role="button" data-toggle="modal"><i class="icon-plus"></i>Assign to Moment</a>
+
+            <span class="clearfix"></span>
+        </div><!-- row-fluid -->
+    </div><!-- /sort -->
+
+
+    <div class="container-fluid main">
+        <div class="tab-content">
+            <!-- Moments -->
+
+            <div class="tab-pane active" id="giftees">
+                <div class="row-fluid">
+                    <div class="span3 search">
+                        <div class="delete"><a href="#delete" role="button" data-toggle="modal"><i class="icon-trash"></i></a></div>
+                        <h3>Search Moments</h3>
+                        <form>
+                          <fieldset>
+                            <label>Search by name or email</label>
+                            <input type="text">
+                            <hr class="search-form">
+                            <div class="input-append">
+                            <label>Filter by Relationship</label>
+                              <input class="span11" id="appendedDropdownButton" type="text">
+                              <div class="btn-group">
+                                <button class="btn dropdown-toggle" data-toggle="dropdown">
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Spouse</a></li>
+                                    <li><a href="#">Boyfriend</a></li>
+                                    <li><a href="#">Girlfriend</a></li>
+                                    <li><a href="#">Fiancé</a></li>
+                                    <li><a href="#">Fiancée</a></li>
+                                    <li><a href="#">Partner</a></li>
+                                    <li><a href="#">Friend</a></li>
+                                    <li><a href="#">Family</a></li>
+                                    <li><a href="#">Coworker</a></li>
+                                </ul>
+                              </div><!-- /button-group -->
+                            </div><!-- /input append -->
+                            <hr class="search-form">
+                            <label>Search by Tags</label>
+                            <ul class="search-tags">
+                                <li><span class="label label-info"><a href="#">Tag</a></span></li>
+                                <li><span class="label label-info"><a href="#">Tag</a></span></li>
+                                <li><span class="label label-info"><a href="#">Tag</a></span></li>
+                                <li><span class="label label-info"><a href="#">Tag</a></span></li>
+                                <li><span class="label label-info"><a href="#">Tag</a></span></li>
+                                <li><a href="#">More &raquo;</a></li>                              
+                            </ul>
+                            <hr class="search-form">
+                            <a class="btn">Search Users</a>
+                          </fieldset>
+                        </form>
+                </div><!-- /search -->
+                <div class="span9">
+                    <div class="row-fluid">
+                        <div class="span4 card occasion-giftee">
+                            <div class="delete"><a href="#delete" role="button" data-toggle="modal"><i class="icon-trash"></i></a></div>
+                            <h3><a href="/lsadmin/occasions/giftee.html">Dana Mueller</a></h3>
+                            <p>Spouse of <a class="detail-link" href="/lsadmin/people/people-single.html">Stephan Mueller</a></p>
+                            <h3 class="tmv">28</h3>
+                        </div><!-- /span4 -->
+                        <div class="span4 card occasion-giftee alert-error">
+                            <div class="delete"><a href="#delete" role="button" data-toggle="modal"><i class="icon-trash"></i></a></div>
+                            <h3><a href="/lsadmin/occasions/giftee.html">Stephan Mueller</a></h3>
+                            <p>Spouse of <a class="detail-link" href="/lsadmin/people/people-single.html">Dana Mueller</a></p>
+                            <h3 class="tmv">12</h3>
+                        </div><!-- /span4 -->
+                        <div class="span4 card occasion-giftee">
+                            <div class="delete"><a href="#delete" role="button" data-toggle="modal"><i class="icon-trash"></i></a></div>
+                            <h3><a href="/lsadmin/occasions/giftee.html">Sadie Mueller</a></h3>
+                            <p>Daughter of <a class="detail-link" href="/lsadmin/people/people-single.html">Stephan Mueller</a></p>
+                            <h3 class="tmv">22</h3>
+                        </div><!-- /span4 -->
+                    </div><!-- /row-fluid -->
+
+                </div><!-- /span9 -->
+                <div class="span9">
+                    <div class="row-fluid">
+                        <div class="span4 card occasion-giftee">
+                            <div class="delete"><a href="#delete" role="button" data-toggle="modal"><i class="icon-trash"></i></a></div>
+                            <h3><a href="/lsadmin/occasions/giftee.html">Dana Mueller</a></h3>
+                            <p>Spouse of <a class="detail-link" href="/lsadmin/people/people-single.html">Stephan Mueller</a></p>
+                            <h3 class="tmv">28</h3>
+                        </div><!-- /span4 -->
+                        <div class="span4 card occasion-giftee alert-error">
+                            <div class="delete"><a href="#delete" role="button" data-toggle="modal"><i class="icon-trash"></i></a></div>
+                            <h3><a href="/lsadmin/occasions/giftee.html">Stephan Mueller</a></h3>
+                            <p>Spouse of <a class="detail-link" href="/lsadmin/people/people-single.html">Dana Mueller</a></p>
+                            <h3 class="tmv">12</h3>
+                        </div><!-- /span4 -->
+                        <div class="span4 card occasion-giftee">
+                            <div class="delete"><a href="#delete" role="button" data-toggle="modal"><i class="icon-trash"></i></a></div>
+                            <h3><a href="/lsadmin/occasions/giftee.html">Sadie Mueller</a></h3>
+                            <p>Daughter of <a class="detail-link" href="/lsadmin/people/people-single.html">Stephan Mueller</a></p>
+                            <h3 class="tmv">22</h3>
+                        </div><!-- /span4 -->
+                    </div><!-- /row-fluid -->
+                </div><!-- /span9 -->
+                <div class="span9">
+                    <div class="row-fluid">
+                        <div class="span4 card occasion-giftee">
+                            <div class="delete"><a href="#delete" role="button" data-toggle="modal"><i class="icon-trash"></i></a></div>
+                            <h3><a href="/lsadmin/occasions/giftee.html">Dana Mueller</a></h3>
+                            <p>Spouse of <a class="detail-link" href="/lsadmin/people/people-single.html">Stephan Mueller</a></p>
+                            <h3 class="tmv">28</h3>
+                        </div><!-- /span4 -->
+                        <div class="span4 card occasion-giftee alert-error">
+                            <div class="delete"><a href="#delete" role="button" data-toggle="modal"><i class="icon-trash"></i></a></div>
+                            <h3><a href="/lsadmin/occasions/giftee.html">Stephan Mueller</a></h3>
+                            <p>Spouse of <a class="detail-link" href="/lsadmin/people/people-single.html">Dana Mueller</a></p>
+                            <h3 class="tmv">12</h3>
+                        </div><!-- /span4 -->
+                        <div class="span4 card occasion-giftee">
+                            <div class="delete"><a href="#delete" role="button" data-toggle="modal"><i class="icon-trash"></i></a></div>
+                            <h3><a href="/lsadmin/occasions/giftee.html">Sadie Mueller</a></h3>
+                            <p>Daughter of <a class="detail-link" href="/lsadmin/people/people-single.html">Stephan Mueller</a></p>
+                            <h3 class="tmv">22</h3>
+                        </div><!-- /span4 -->
+                    </div><!-- /row-fluid -->
+                </div><!-- /span9 -->
+            </div><!-- /row-fluid -->
+            </div><!-- /tab-pane -->
+
+
+            <div class="tab-pane" id="occasions">
+                <div class="row-fluid">
+                    <div class="span3 search">
+                        <div class="delete"><a href="#"><i class="icon-trash"></i></a></div>
+                        <h3>Search Occasions</h3>
+                        <form>
+                          <fieldset>
+                            <label>Search by name</label>
+                            <input type="text">
+                            <hr class="search-form">
+                            <label>Search by Tags</label>
+                            <ul class="search-tags">
+                                <li><span class="label label-info"><a href="#">Tag</a></span></li>
+                                <li><span class="label label-info"><a href="#">Tag</a></span></li>
+                                <li><span class="label label-info"><a href="#">Tag</a></span></li>
+                                <li><span class="label label-info"><a href="#">Tag</a></span></li>
+                                <li><span class="label label-info"><a href="#">Tag</a></span></li>
+                                <li><a href="#">More &raquo;</a></li>                              
+                            </ul>
+                            <hr class="search-form">
+                            <a class="btn">Search Products</a>
+                          </fieldset>
+                        </form>
+                </div><!-- /search -->
+                <div class="span9">
+                    <div class="row-fluid">
+                        <div class="span4 card occasion alert alert-error">
+                          <div class="delete"><a href="#delete" role="button" data-toggle="modal"><i class="icon-trash"></i></a></div>
+                            <a href="/lsadmin/occasions/occasion-single.html">
+                              <table class="card-header">
+                                <tbody>
+                                  <td>
+                                      <h1 class="card-title">Easter</h1>
+                                  </td>
+                                </tbody>
+                              </table>
+                             <h2 class="lead-time">7 days away</h2>
+                             <p class="date">4/20/2014 | TMV: 02</p>
+                            </a>
+                          </div> <!-- /span4 -->
+                        <div class="span4 card occasion">
+                          <div class="delete"><a href="#delete" role="button" data-toggle="modal"><i class="icon-trash"></i></a></div>
+                            <a href="/lsadmin/occasions/occasion-single.html">
+                              <table class="card-header">
+                                <tbody>
+                                  <td>
+                                      <h1 class="card-title">Administrative Professionals Day</h1>
+                                  </td>
+                                </tbody>
+                              </table>
+                             <h2 class="lead-time">10 days away</h2>
+                             <p class="date">4/23/2014 | TMV: 18</p>
+                            </a>
+                          </div> <!-- /span4 -->
+                        <div class="span4 card occasion">
+                          <div class="delete"><a href="#delete" role="button" data-toggle="modal"><i class="icon-trash"></i></a></div>
+                            <a href="/lsadmin/occasions/occasion-single.html">
+                              <table class="card-header">
+                                <tbody>
+                                  <td>
+                                      <h1 class="card-title">Cinco do Mayo</h2>
+                                  </td>
+                                </tbody>
+                              </table>
+                             <h2 class="lead-time">23 days away</h2>
+                             <p class="date">5/5/2014 | TMV: 22</p>
+                            </a>
+                          </div> <!-- /span3 -->
+                        </div><!-- /occasion-index -->
+                    </div><!-- /row-fluid -->
+                </div><!-- /span9 -->
+            </div><!--  /row-fluid -->
+            </div><!-- /tab-pane -->
+
+
+
+
+            <div class="pagination footer-pagination pull-right">
+                <ul>
+                    <li class="disabled"><a href="#">&laquo;</a></li>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#">&raquo;</a></li>
+                </ul>
+            </div> <!-- /pagination -->
+            </div><!-- /tab-pane -->
+          </div><!-- /tab-content -->
+
+          </div> <!-- /row-fluid -->
+    </div> <!-- /container -->
+
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2013 Lily and Strum</p>
+      </div>
+    </footer>
+
+<!-- Details -->
+      <div id="editDetails" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+          <h3 id="myModalLabel">Add Occasion</h3>
+        </div>
+        <div class="modal-body">
+            Add Occasion form with relevant fields filled in.
+      </div><!-- /modal body"-->
+        <div class="modal-footer">
+          <a class="btn" data-dismiss="modal" aria-hidden="true">Save Changes</a>
+          <a class="btn btn-close" data-dismiss="modal" aria-hidden="true">Close</a>
+        </div>
+      </div><!-- /details modal -->
+
+<!-- Tags -->
+      <div id="editTags" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+          <h3 id="myModalLabel">Add Tags</h3>
+        </div>
+        <div class="modal-body">
+            Add/Edit tags form
+        </div>
+        <div class="modal-footer">
+          <a class="btn" data-dismiss="modal" aria-hidden="true">Save Changes</a>
+          <a class="btn btn-close" data-dismiss="modal" aria-hidden="true">Close</a>
+        </div>
+      </div><!-- /tags modal -->
+
+<!-- Assign -->
+      <div id="assign" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+          <h3 id="myModalLabel">Assign to Moment</h3>
+        </div>
+        <div class="modal-body">
+           Assign Search Form
+        </div>
+        <div class="modal-footer">
+          <a class="btn" data-dismiss="modal" aria-hidden="true">Assign</a>
+          <a class="btn btn-close" data-dismiss="modal" aria-hidden="true">Close</a>
+        </div>
+      </div><!-- /Assign modal -->
+
+<!-- Delete -->
+      <div id="delete" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+          <h3 id="myModalLabel">Delete</h3>
+        </div>
+        <div class="modal-body">
+          Are you sure you want to delete?
+        </div>
+        <div class="modal-footer">
+          <a class="btn" data-dismiss="modal" aria-hidden="true">Delete</a>
+          <a class="btn btn-close" data-dismiss="modal" aria-hidden="true">Close</a>
+        </div>
+      </div><!-- /Delete modal -->
+
+
+    <!-- JS -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="/lsadmin/js/bootstrap.js"></script>
+    <script src="/lsadmin/js/bootstrap-tag-cloud.js"></script>
+    <script src="/lsadmin/js/site.js"></script>
+  </body>
+</html>

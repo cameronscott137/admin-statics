@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Lily &amp; Strum Admin – Feed Index</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="/lsadmin/style.css" rel="stylesheet">
+    <link href="/lsadmin/css/bootstrap.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="../assets/js/html5shiv.js"></script>
+    <![endif]-->
+    <!-- Fav and touch icons -->
+    <link rel="shortcut icon" href="./images/favicon.ico">
+  </head>
+  <body class="rss-index">
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="/lsadmin/index.html"><img src="/lsadmin/images/ls_header_logo.png"></a>
+          <div class="nav-collapse collapse">
+            <p class="navbar-text pull-right">
+              Logged in as <a href="#" class="navbar-link">Traci Lipple</a>
+            </p>
+            <ul class="nav">
+              <li><a href="/lsadmin/catalog/catalog-index.html">Catalog</a></li>              
+              <li><a href="/lsadmin/people/people-index.html">People</a></li>
+              <li><a href="/lsadmin/occasions/occasion-index.html">Occasions</a></li>
+              <li class="active"><a href="/lsadmin/feeds/feed-index.html">Feeds</a></li>
+              <li><a href="#">Affiliates</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+            <div class="row-fluid header">
+              <ul class="breadcrumb">
+                <li><a href="/lsadmin/index.html">Home</a> <span class="divider">/</span></li>
+                <li class="active">Feeds</li>
+              </ul>
+              <header class="rss-item-detail">
+                <h1>Your Feeds</h1>
+              </header>
+            </div> <!-- end header -->
+
+         <div class="sort">
+            <ul class="nav nav-pills">
+              <li class="active">
+                <a href="#all" data-toggle="tab">Show All</a>
+              </li>
+              <li><a href="#affiliates" data-toggle="tab"><i class="icon-star"></i>Affiliates</a></li>
+              <li><a href="#tastemakers" data-toggle="tab"><i class="icon-bullhorn"></i>Tastemakers</a></li>
+            </ul>
+           <a href="#addModal" role="button" data-toggle="modal"><button class="btn btn-primary pull-right" type="button"><i class="icon-plus"></i>Add feed</button></a>
+            <span class="clearfix"></span>
+          </div><!-- /sort -->
+
+        <div class="tab-content">
+          <!-- #vendor tab-pane -->
+          <div class="tab-pane active" id="all">
+            <div class="row-fluid rss-index">
+              <div class="span3 card rss-feed">
+                <div class="delete"><a href="#deleteModal" role="button" data-toggle="modal"><i class="icon-trash"></i></a></div>
+                <img class="img-polaroid" src="http://placehold.it/150x150&text=rss+image"/>
+                      <h2>Feed #1</h2>
+                          <div class="alert alert-success">
+                              <strong>5 new items</strong><br/>
+                              Last viewed: <strong>2 days ago</strong>
+                          </div>
+
+                      <a class="rss-button" href="/lsadmin/feeds/feed-single.html"><button class="btn btn-large btn-primary" type="button">View Feed</button></a>
+              </div>
+              <div class="span3 card rss-feed">
+                <div class="delete"><a href="#deleteModal" role="button" data-toggle="modal"><i class="icon-trash"></i></a></div>
+                <img class="img-polaroid" src="http://placehold.it/150x150&text=rss+image"/>
+                      <h2>Feed #2</h2>
+                          <div class="alert alert-success">
+                              <strong>3 new items</strong><br/>
+                              Last viewed: <strong>3 days ago</strong>
+                          </div>
+                      <a class="rss-button" href="/lsadmin/feeds/feed-single.html"><button class="btn btn-large btn-primary" type="button">View Feed</button></a>
+              </div>
+              <div class="span3 card rss-feed">
+                <div class="delete"><a href="#deleteModal" role="button" data-toggle="modal"><i class="icon-trash"></i></a></div>
+                <img class="img-polaroid" src="http://placehold.it/150x150&text=rss+image"/>
+                      <h2>Feed #3</h2>
+                          <div class="alert alert-error">
+                              <strong>0 new items</strong><br/>
+                              Last viewed: <strong>2 days ago</strong>
+                          </div>
+                          <a class="rss-button" href="/lsadmin/feeds/feed-single.html"><button class="btn btn-large btn-primary" type="button">View Feed</button></a>
+              </div>
+              <div class="span3 card rss-feed">
+                <div class="delete"><a href="#deleteModal" role="button" data-toggle="modal"><i class="icon-trash"></i></a></div>
+                <img class="img-polaroid" src="http://placehold.it/150x150&text=rss+image"/>
+                      <h2>Feed #4</h2>
+                          <div class="alert alert-error">
+                              <strong>0 new items</strong><br/>
+                              Last viewed: <strong>5 days ago</strong>
+                          </div>
+                      <a class="rss-button" href="/lsadmin/feeds/feed-single.html"><button class="btn btn-large btn-primary" type="button">View Feed</button></a>
+              </div>
+              <div class="pagination pull-right">
+                  <ul>
+                    <li class="disabled"><a href="#">&laquo;</a></li>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#">&raquo;</a></li>
+                  </ul>
+              </div> <!-- /pagination -->
+            </div><!-- end row-fluid -->
+          </div> <!-- end tab-pane -->
+
+
+          <!-- #affiliates tab-pane -->
+          <div class="tab-pane" id="affiliates">
+            <div class="row-fluid rss-index">
+              <div class="span3 card rss-feed">
+                <div class="delete"><a href="#"><i class="icon-trash"></i></a></div>
+                <img class="img-polaroid" src="http://placehold.it/150x150&text=rss+image"/>
+                      <h2>Affiliate Feed</h2>
+                          <div class="alert alert-success">
+                              <strong>10 new items</strong><br/>
+                              Last viewed: <strong>2 days ago</strong>
+                          </div>
+                      <a class="rss-button" href="/lsadmin/feeds/feed-single.html"><button class="btn btn-large btn-primary" type="button">View Feed</button></a>
+              </div>
+              <div class="span3 card rss-feed">
+                <div class="delete"><a href="#"><i class="icon-trash"></i></a></div>
+                <img class="img-polaroid" src="http://placehold.it/150x150&text=rss+image"/>
+                      <h2>Affiliate Feed</h2>
+                          <div class="alert alert-error">
+                              <strong>0 new items</strong><br/>
+                              Last viewed: <strong>3 days ago</strong>
+                          </div>
+
+                      <a class="rss-button" href="/lsadmin/feeds/feed-single.html"><button class="btn btn-large btn-primary" type="button">View Feed</button></a>
+              </div>
+            </div><!-- end row-fluid -->
+          </div> <!-- end tab-pane -->
+
+
+          <!-- #tastemakers tab-pane -->
+          <div class="tab-pane" id="tastemakers">
+            <div class="row-fluid rss-index">
+              <div class="span3 card rss-feed">
+                <div class="delete"><a href="#"><i class="icon-trash"></i></a></div>
+                <img class="img-polaroid" src="http://placehold.it/150x150&text=rss+image"/>
+                      <h2>Tastemaker Feed</h2>
+                          <div class="alert alert-success">
+                              <strong>2 new items</strong><br/>
+                              Last viewed: <strong>0 days ago</strong>
+                          </div>
+                      <a class="rss-button" href="/lsadmin/feeds/feed-single.html"><button class="btn btn-large btn-primary" type="button">View Feed</button></a>
+              </div>
+              <div class="span3 card rss-feed">
+                <div class="delete"><a href="#"><i class="icon-trash"></i></a></div>
+                <img class="img-polaroid" src="http://placehold.it/150x150&text=rss+image"/>
+                      <h2>Tastemaker Feed</h2>
+                          <div class="alert alert-success">
+                              <strong>3 new items</strong><br/>
+                              Last viewed: <strong>5 days ago</strong>
+                          </div>
+                      <a class="rss-button" href="/lsadmin/feeds/feed-single.html"><button class="btn btn-large btn-primary" type="button">View Feed</button></a>
+              </div>
+            </div><!-- end row-fluid -->
+          </div> <!-- end tab-pane -->
+          </div><!-- end tab-content -->
+  
+    </div> <!-- /container -->
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2013 Lily and Strum</p>
+      </div>
+    </footer>
+
+<!-- Add Feed Modal -->
+<div id="addModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">Add A Feed</h3>
+  </div>
+  <div class="modal-body">
+
+    <form class="form-horizontal">
+      <div class="control-group">
+        <label class="control-label">Feed Name</label>
+        <div class="controls">
+          <input type="text" id="inputEmail" placeholder="Feed Name">
+        </div><!-- /controls -->
+      </div><!-- /control-group -->
+      <div class="control-group">
+        <label class="control-label" for="inputPassword">Feed URL</label>
+        <div class="controls">
+          <input type="password" id="inputPassword" placeholder="Feed URL">
+        </div><!-- /controls -->
+      </div><!-- /control-group -->
+      <div class="control-group">
+        <label class="control-label" for="inputPassword"></label>
+        <div class="controls">
+              <label class="radio inline">
+                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>Affiliate Feed
+              </label>
+              <label class="radio inline">
+                <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">Tastemaker Feed
+              </label>
+        </div><!-- /controls -->
+      </div><!-- /control-group -->
+      <div class="control-group">
+        <div class="controls">
+          <button class="btn">Test Feed</button>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+    <button class="btn btn-primary">Save Feed</button>
+  </div>
+</div>
+
+<!-- Add Delete Modal -->
+<div id="deleteModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">Are you sure you want to delete this feed?</h3>
+  </div>
+  <div class="modal-body">
+        <button class="btn btn-primary" data-dismiss="modal" aria-hidden="true">No, keep it</button>
+        <button class="btn btn-danger">Yes, delete it</button>
+  </div>
+</div>
+
+
+    <!-- JS -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="/lsadmin/js/bootstrap.js"></script>
+    <script src="/lsadmin/js/site.js"></script>
+  </body>
+</html>
